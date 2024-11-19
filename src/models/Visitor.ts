@@ -5,7 +5,7 @@ export interface IVisitor extends Document {
   nombre: string;
   correo: string;
   telefono: string;
-  direccion: string;
+  empresa: string;
   // Si tienes otros campos, agréguelos aquí
 }
 
@@ -14,6 +14,7 @@ const visitorSchema: Schema = new Schema({
   nombre: { type: String, required: true },
   correo: { type: String, required: true, unique: true },
   celular: { type: String, required: true},  // Asegúrate de que el teléfono tenga 10 dígitos
+  empresa: { type: String, required: true },
   interesadoEnEventos: { type: Boolean, required: true }  // Agregar este campo
 
 });
